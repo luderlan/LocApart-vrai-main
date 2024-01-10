@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --bg-color: #ddd0c8;
+    --text-color: #323232;
+    --main-color: #1b5eaf;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--text-color);
+    font-family: 'Mooli', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 146px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 60px 12%;
+    transition: all .50s ease;
+    font-family: 'Finlandica', sans-serif;
+    background: var(--bg-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 25px;
+    margin: 5px 0;
+    transition: all .50s ease;
+}   
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.main a:hover{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+@media (max-width: 1280px) {
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 1090px) {
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 29vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .navbar a:hover {
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+    .navbar a.active{
+        color: var(--text-color);
+    }
+    .navbar.open{
+        right: 2%;
+    }
+}
+
+.navbar .search-bar {
+    display: flex;
+    align-items: center;
+    margin: 0px 30px;
+}
+
+.navbar .search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 9px;
+    margin-right: 6px;
+    font-family: 'Finlandica', sans-serif;
+}
+
+.navbar .search-bar i {
+    color: var(--main-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.content-section {
+    background-color: #a3a3a32f;
+    padding-top: 50px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content-item {
+    background: #acb8c6;
+    text-align: center;
+    max-width: 400px;
+    margin-bottom: 50px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+    width: calc(25% - 10px);
+    border-radius: 12px;
+}
+
+h3 {
+    color: #1b5eaf;
+}
+
+i {
+    color: #1b5eaf;
+}
+
+@media (max-width: 1280px) {
+    .content-item {
+        width: calc(33.33% - 10px); /* Ajustez la largeur pour un maximum de trois éléments par ligne */
+    }
+}
+
+@media (max-width: 1090px) {
+    .content-item {
+        width: calc(50% - 10px); /* Ajustez la largeur pour deux éléments par ligne */
+    }
+}
+
+@media (max-width: 767px) {
+    .content-item {
+        width: 100%; /* Un élément par ligne pour les petits écrans */
+    }
+}
+
+main {
+    max-width:1500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 6px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    }
+
+th {
+    background-color: #323232;
+    color: white;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 4px;
+    margin-right: 5px;
+    width: 100%;
+}
+
+.formulaire-insertion {
+    margin-top: 10px;
+}
+
+.formulaire-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.formulaire-input {
+    width: 25%;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.bouton-primaire {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bouton-primaire:hover {
+    background-color: #45a049;
+}
+
+.btn {
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #1b5eaf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.section-admin {
+    margin-left: 30px;
+    display: none;
+}
+        
+.bouton {
+    background: transparent;
+    position: absolute;
+    top: 25%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #1b5eaf;
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: #323232;
+    transition: color 0.7s 0.4s ease-out;
+    text-align: center;
+}
+
+.bouton span {
+    margin: 10px;
+}
+
+.bouton > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+
+.bouton:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+.bouton::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+.bouton:hover {
+    color: #f4f4f4;
+    border: 1px solid #1b5eaf;
+}
+
+.bouton:hover::before {
+    box-shadow: inset 0 0 0 10em #1b5eaf;
+}
+
+.bouton svg path {
+    fill: #323232;
+    transition: fill 0.4s ease-in-out;
+}
+
+.bouton:hover svg path {
+    fill: #fff;
+}
